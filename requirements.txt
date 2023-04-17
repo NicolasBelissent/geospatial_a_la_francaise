@@ -8,5 +8,5 @@ localtileserver
 nbserverproxy
 streamlit
 streamlit-option-menu
-streamlit_folium
+streamlit-folium
 
