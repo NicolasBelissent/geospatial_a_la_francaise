@@ -1,5 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
+from streamlit_folium import folium_static
 import folium
 import geopandas as gpd
 import numpy as np
@@ -38,6 +39,7 @@ def app():
         
         #Add each row to the map
         folium.Marker(location=[row['lat'],row['long']],
-                    popup = popup, c=row['Text']).add_to(map)
+                    popup = popup, c=row['Text']).add_to(m)
         
-    m.to_streamlit(height=700)
+    # Display the map using folium_static
+    folium_static(m)
