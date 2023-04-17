@@ -1,6 +1,5 @@
-{
-    "features": [
-    {
+
+    [{
         "geometry": {
             "x": 92763,
             "y": 5350102,
@@ -89,8 +88,8 @@
             "ISO_Country": "FR",
             "Location": "Region",
             "Region": "Haute-Savoie",
-            "lat": 46,
-            "long": 6.3333,
+            "lat": 46.2808,
+            "long": 6.72,
             "Type": "Cow",
             "Text": "Tomme d'Abondance or Abondance is a medium-sized mountain cheese from the Haute Savoie region of France in the Rhone-Alps. For centuries, this deep golden cheese has been made in mountain chalets, near the border between France and Switzerland. It is made exclusively from unpasteurised milk produced by the Abondance breed of cattle. ",
             "File": "Abondance.jpg",
@@ -142,7 +141,7 @@
             "lat": 43.3333,
             "long": -6,
             "Type": "Cow",
-            "Text": "Afuega?l Pitu' is one of the oldest Spanish cheeses. It is also famous as one of the most widespread Asturian cheeses. The cheese is produced from cow's full fat milk in towns that dot the lower basins of river Narcea and river Nal�n in the central Asturias-Northern Spain.",
+            "Text": "Afuega'l Pitu' is one of the oldest Spanish cheeses. It is also famous as one of the most widespread Asturian cheeses. The cheese is produced from cow's full fat milk in towns that dot the lower basins of river Narcea and river Nal�n in the central Asturias-Northern Spain.",
             "File": "AfuegaLPitu.jpg",
             "Credit": "Creative Commons / Shalbat",
             "Photo_URL": "https://farm8.staticflickr.com/7578/16058261500_09c19ec9f7.jpg",
@@ -216,7 +215,7 @@
             "lat": 39.6483803,
             "long": -7.9774342,
             "Type": "Sheep",
-            "Text": "1200-82 n; A round of hard cheese made with sheep's milk, good for grating. It has a dense, smooth, even paste and a dry, dark brown rind. ",
+            "Text": "A round of hard cheese made with sheep's milk, good for grating. It has a dense, smooth, even paste and a dry, dark brown rind. ",
             "__OBJECTID": 8,
             "Region": null,
             "File": null,
@@ -552,6 +551,57 @@
     },
     {
         "geometry": {
+            "x": 5386,
+            "y": 57472,
+            "spatialReference": {
+                "wkid": 102100
+            }
+        },
+        "attributes": {
+            "Country": "France",
+            "Cheese": "Reblochon",
+            "ISO_Country": "FR",
+            "Location": "Region",
+            "Region": "Rhone-Alpes",
+            "lat": 45.9420,
+            "long": 6.4267,
+            "Type": "Cow",
+            "Text": "Reblochon is a soft washed-rind and smear-ripened French cheese made in the Alpine region of Haute-Savoie from raw cow's milk. It has its own AOC designation. Reblochon was first produced in the Thônes and Arly valleys, in the Aravis massif.",
+            "File": "Beaufort.jpg",
+            "Credit": "Photo credit: Zubro",
+            "Source": "Cheese.com",
+            "Photo_URL": "https://cheesemaking-supply-co.s3.us-east-2.amazonaws.com/cheese-making-recipes/reblochon/ReblochNu31.jpg",
+            "__OBJECTID": 22
+        }
+    },
+    {
+        "geometry": {
+            "x": 5386,
+            "y": 57472,
+            "spatialReference": {
+                "wkid": 102100
+            }
+        },
+        "attributes": {
+            "Country": "France",
+            "Cheese": "Comté",
+            "ISO_Country": "FR",
+            "Location": "Region",
+            "Region": "Jura",
+            "lat": 46.67,
+            "long": 5.5507,
+            "Type": "Cow",
+            "Text": "Comté is a French cheese made from unpasteurized cow's milk in the Franche-Comté region of eastern France bordering Switzerland and sharing much of its cuisine. Comté has the highest production of all French Appellation d'origine contrôlée cheeses, at around 66,500 tonnes annually.",
+            "File": "Beaufort.jpg",
+            "Credit": "Photo credit: Zubro",
+            "Source": "Cheese.com",
+            "Photo_URL": "https://images.squarespace-cdn.com/content/v1/5eb43938f468c330e7d8d665/2a154117-9097-4390-9701-bd4c664a2f21/26E1F15B-5647-4D07-95F9-E5EC5B924EA6.jpeg?format=1000w
+            ",
+            "__OBJECTID": 22
+        }
+    },
+    {
+        "geometry": {
             "x": 538786,
             "y": 5741972,
             "spatialReference": {
@@ -564,10 +614,10 @@
             "ISO_Country": "FR",
             "Location": "Region",
             "Region": "Rhone-Alpes",
-            "lat": 45.76,
-            "long": 4.84,
+            "lat": 45.71,
+            "long": 6.57,
             "Type": "Cow",
-            "Text": "1200 pg 115",
+            "Text": "Beaufort is a firm, raw cow's milk cheese associated with the gruyère family. An Alpine cheese, it is produced in Beaufortain, Tarentaise valley and Maurienne, which are located in the Savoie region of the French Alps.",
             "File": "Beaufort.jpg",
             "Credit": "Photo credit: Zubro",
             "Source": "Cheese.com",
@@ -792,12 +842,12 @@
             "lat": 48.5,
             "long": 2.5,
             "Type": "Cow",
-            "Text": "1200 pg 43",
+            "Text": "La Brie des Malesherbes a ses origines dans une petite brie sur le charbon de bois, créée au 19ème siècle pour les travailleurs agricoles. De taille modeste (1 kg), qui a mûri pendant plus de huit semaines, puis séchée grâce aux cendres. Cela a permis aux travailleurs de le prendre comme un sandwich dans les champs. Parce que, une fois sec, il n'a pas fusionné ni couler, et les insectes n'étaient pas attirés par lui, grâce à la cendre.",
             "Source": "Wiki",
             "__OBJECTID": 31,
             "File": null,
             "Credit": null,
-            "Photo_URL": null
+            "Photo_URL": "https://www.mundoquesos.com/wp-content/uploads/2020/07/Brie-des-Malesherbes.jpg"
         }
     },
     {
@@ -3267,12 +3317,12 @@
             "lat": 40,
             "long": 9,
             "Type": "Sheep",
-            "Text": "1200 pg 109",
+            "Text": "Pecorino sardo is a firm cheese from the Italian island of Sardinia which is made from sheep milk: specifically from the milk of the local Sardinian breed.",
             "Source": "Cheese.com",
             "__OBJECTID": 130,
             "File": null,
             "Credit": null,
-            "Photo_URL": null
+            "Photo_URL": "https://cdn.ecommercedns.uk/files/0/227220/9/13740239/castellanza-fiore-sardo-dop.png"
         }
     },
     {
@@ -3317,12 +3367,12 @@
             "lat": 47,
             "long": 6,
             "Type": "Cow",
-            "Text": "1200 pg 39",
+            "Text": "La Pierre-qui-Vire cheese is a farm cheese made from full-fat raw cow's milk. It was originally produced by monks from the Abbey of La Pierre-qui-Vire in Saint-Léger-Vauban, in the Morvan. After buying the neighbouring farm in 1938 to make their cheese, they handed it over to a farming couple in 1987, who have kept the project going. The milk of the 80 or so Brown Swiss cows is processed on site in a completely artisanal way and, since 1969, has met the standards of France's Organic Agriculture label.",
             "Source": "Cheese 300",
             "__OBJECTID": 132,
             "File": null,
             "Credit": null,
-            "Photo_URL": null
+            "Photo_URL": "https://3.bp.blogspot.com/-h9j99L_5oz4/VBngIS8NEDI/AAAAAAAAVbw/ObIegfdc80c/s1600/IMG_6310_edited-2.jpg"
         }
     },
     {
@@ -4450,5 +4500,4 @@
             "Photo_URL": null
         }
     }
-]
-}
+    ]

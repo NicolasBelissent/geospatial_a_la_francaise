@@ -39,8 +39,6 @@ with st.sidebar:
         This web app was built by Nicolas Belissent.
         
         Source code: <https://github.com/NicolasBelissent/geospatial-streamlit>
-
-        More menu icons: <https://icons.getbootstrap.com>
     """
     )
 
