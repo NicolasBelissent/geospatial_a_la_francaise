@@ -38,8 +38,14 @@ def app():
     # # Create a random value for each country
     # values = np.random.rand(len(gdf))
 
-    # Create a Folium map object
-    m = folium.Map(location=[0, 0], zoom_start=2)
+    political_countries_url = (
+        "http://geojson.xyz/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson"
+    )
+
+    m = folium.Map(location=(30, 10), zoom_start=3, tiles="cartodb positron")
+    folium.GeoJson(political_countries_url).add_to(m)
+
+    m.save("footprint.html")
 
     # # Add a choropleth layer to the map
     # folium.Choropleth(
