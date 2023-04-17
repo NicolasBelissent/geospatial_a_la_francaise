@@ -2,7 +2,6 @@ import streamlit as st
 import leafmap.foliumap as leafmap
 import folium
 import geopandas as gpd
-from streamlit_folium import folium_static
 import numpy as np
 
 
@@ -55,4 +54,4 @@ def app():
     # ).add_to(m)
 
     # Display the map in Streamlit using the folium_static method
-    folium_static(m)
+    m.to_streamlit(height=700)
