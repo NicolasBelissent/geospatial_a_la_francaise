@@ -60,15 +60,4 @@ def app():
         return m
 
     #define start locations for the map
-    if st.button('Europe'):
-        folium_static(get_map(desc, start_loc = [54.5260, 15.2551]))
-    elif st.button('North America'):
-        folium_static(get_map(desc, start_loc = [54.5260, 105.2551]))
-    elif st.button('South America'):
-        folium_static(get_map(desc, start_loc = [8.7832, 55.4915]))
-    elif st.button('Asia Pacific'):
-        folium_static(get_map(desc, start_loc = [34.0479, 100.6197]))
-    elif st.button('Africa'):
-        folium_static(get_map(desc, start_loc = [8.7832, 34.5085]))
-    else:
-        folium_static(get_map(desc, start_loc = [0,0], zoom_start=1))
+    folium_static(get_map(desc, start_loc = [0,0], zoom_start=1))
