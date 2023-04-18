@@ -35,25 +35,40 @@ def app():
     raw = pd.read_json('cheese_data.json')['attributes']
     desc = pd.json_normalize(raw)
 
-    m = folium.Map(location=(30, 10), zoom_start=3)
 
-    for i,row in desc.iterrows():
-        #Setup the content of the popup
-        #iframe = folium.IFrame('Cheese:' + str(row["Cheese"])+'\n'+'Region:' + str(row["Region"])+'\n'+'Type:' + str(row["Type"])+'\n')
-        html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
-        <p style="font-family: Verdana"> Type: {1} </p>
-        <p style="font-family: Verdana"> Region: {2} </p>
-        <p style="font-family: Verdana"> Description: {3} </p>
-        <br>
-        <img src = {4}> '''.format(row['Cheese'], row['Type'], row['Region'], row['Text'],row['Photo_URL'])
-        iframe = folium.IFrame(html=html, width=500, height=500)
+    def get_map(data, start_loc, zoom_start=3):
+        
+        m = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
 
-        #Initialise the popup using the iframe
-        popup = folium.Popup(iframe, min_width=500, max_width=500)
-        
-        #Add each row to the map
-        folium.Marker(location=[row['lat'],row['long']],
-                    popup = popup, c=row['Text']).add_to(m)
-        
-    # Display the map using folium_static
-    folium_static(m)
+        for i,row in data.iterrows():
+            #Setup the content of the popup
+            #iframe = folium.IFrame('Cheese:' + str(row["Cheese"])+'\n'+'Region:' + str(row["Region"])+'\n'+'Type:' + str(row["Type"])+'\n')
+            html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
+            <p style="font-family: Verdana"> Type: {1} </p>
+            <p style="font-family: Verdana"> Region: {2} </p>
+            <p style="font-family: Verdana"> Description: {3} </p>
+            <br>
+            <img src = {4}> '''.format(row['Cheese'], row['Type'], row['Region'], row['Text'],row['Photo_URL'])
+            iframe = folium.IFrame(html=html, width=500, height=500)
+
+            #Initialise the popup using the iframe
+            popup = folium.Popup(iframe, min_width=500, max_width=500)
+            
+            #Add each row to the map
+            folium.Marker(location=[row['lat'],row['long']],
+                        popup = popup, c=row['Text']).add_to(m)
+        return m
+
+    #define start locations for the map
+    if st.button('Europe'):
+        folium_static(get_map(desc, start_loc = [54.5260, 15.2551]))
+    elif st.button('North America'):
+        folium_static(get_map(desc, start_loc = [54.5260, 105.2551]))
+    elif st.button('South America'):
+        folium_static(get_map(desc, start_loc = [8.7832, 55.4915]))
+    elif st.button('Asia Pacific'):
+        folium_static(get_map(desc, start_loc = [34.0479, 100.6197]))
+    elif st.button('Africa'):
+        folium_static(get_map(desc, start_loc = [8.7832, 34.5085]))
+    else:
+        folium_static(get_map(desc, start_loc = [0,0], zoom_start=1))
