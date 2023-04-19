@@ -9,4 +9,4 @@ nbserverproxy
 streamlit
 streamlit-option-menu
 streamlit-folium
-
+mapclassify
