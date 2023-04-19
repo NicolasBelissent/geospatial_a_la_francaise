@@ -1,3 +1,6 @@
+# Import pandas and folium libraries
+import pandas as pd
+import folium
 import streamlit as st
 import leafmap.foliumap as leafmap
 from streamlit_folium import folium_static
@@ -32,32 +35,42 @@ def app():
     """
     )
 
-    raw = pd.read_json('cheese_data.json')['attributes']
-    desc = pd.json_normalize(raw)
 
 
+    # Read in data from a JSON file and select the 'attributes' column
+    aw = pd.read_json('cheese_data.json')['attributes']
+
+    # Normalize the JSON data into a flat table format
+    desc = pd.json_normalize(aw)
+
+    # Define function to create the map
     def get_map(data, start_loc, zoom_start=3):
         
+        # Create a new map object with starting location and zoom level
         m = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
 
-        for i,row in data.iterrows():
-            #Setup the content of the popup
-            #iframe = folium.IFrame('Cheese:' + str(row["Cheese"])+'\n'+'Region:' + str(row["Region"])+'\n'+'Type:' + str(row["Type"])+'\n')
+        # Iterate over each row of data
+        for i, row in data.iterrows():
+            
+            # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
             <p style="font-family: Verdana"> Type: {1} </p>
             <p style="font-family: Verdana"> Region: {2} </p>
             <p style="font-family: Verdana"> Description: {3} </p>
             <br>
             <img src = {4}> '''.format(row['Cheese'], row['Type'], row['Region'], row['Text'],row['Photo_URL'])
+            
+            # Create an iframe with the HTML content
             iframe = folium.IFrame(html=html, width=500, height=500)
 
-            #Initialise the popup using the iframe
+            # Initialize the popup using the iframe
             popup = folium.Popup(iframe, min_width=500, max_width=500)
             
-            #Add each row to the map
-            folium.Marker(location=[row['lat'],row['long']],
-                        popup = popup, c=row['Text']).add_to(m)
+            # Add a marker for each location on the map
+            folium.Marker(location=[row['lat'],row['long']], popup=popup, c=row['Text']).add_to(m)
+        
+        # Return the completed map object
         return m
 
-    #define start locations for the map
-    folium_static(get_map(desc, start_loc = [0,0], zoom_start=1))
+    # Define the starting location and zoom level, and render the map
+    folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1))
