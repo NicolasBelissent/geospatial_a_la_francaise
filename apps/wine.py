@@ -80,5 +80,5 @@ def app():
     m = select_df.explore(column = 'Wine name',popup=True, legend=False)
     m = wine_info_geo_df.explore(m=m)    
     folium.LayerControl().add_to(m)  # use folium to add layer control
-
+    st.pyplot()
     folium_static(m)  # show map
