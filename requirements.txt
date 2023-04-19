@@ -10,3 +10,5 @@ streamlit
 streamlit-option-menu
 streamlit-folium
 mapclassify
+matplotlib
+folium
