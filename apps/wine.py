@@ -81,4 +81,4 @@ def app():
     m = wine_info_geo_df.explore(m=m)    
     folium.LayerControl().add_to(m)  # use folium to add layer control
 
-    m  # show map
+    folium_static(m)  # show map
