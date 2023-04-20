@@ -51,7 +51,7 @@ def app():
         map = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
     
         # Adding a custom icon for the marker
-        icon_url = 'http://clipart-library.com/new_gallery/146-1462140_the-cheese-cartoon-transparent-background.png'
+        icon_url = 'data/cheese_marker.png'
 
         # Iterate over each row of data
         for _, row in data.iterrows():
