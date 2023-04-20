@@ -18,6 +18,8 @@ To run this web app locally, follow these steps:
 
 The Cheese Visualization page displays a world map with markers for the origin of different cheeses. The user can select a cheese type from a dropdown menu to see the specific location where it originated. The map is created using the Folium package in Python.
 
+![image](https://user-images.githubusercontent.com/34235544/233347779-028d6320-ed0d-4a0d-bcbd-7b74b3b11815.png)
+
 ### Wine Statistics Page
 
 The Wine Statistics page displays a choropleth map of Europe, showing wine production and consumption statistics by country. The user can select whether to view production or consumption data using a radio button. The map is created using Geopandas and GeoPackage data.
