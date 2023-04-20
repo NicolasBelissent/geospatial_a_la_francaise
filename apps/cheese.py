@@ -43,15 +43,15 @@ def app():
     # Normalize the JSON data into a flat table format
     desc = pd.json_normalize(aw)
 
-    # Adding a custom icon for the marker
-    icon_url = 'http://clipart-library.com/new_gallery/146-1462140_the-cheese-cartoon-transparent-background.png'
-
-
+    
     # Define function to create the map
     def get_map(data, start_loc, zoom_start=3):
         
         # Create a new map object with starting location and zoom level
         m = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
+    
+        # Adding a custom icon for the marker
+        icon_url = 'http://clipart-library.com/new_gallery/146-1462140_the-cheese-cartoon-transparent-background.png'
 
         # Iterate over each row of data
         for i, row in data.iterrows():
@@ -81,3 +81,7 @@ def app():
 
     # Define the starting location and zoom level, and render the map
     folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1))
+
+    
+map = folium.Map(location=(30, 10), zoom_start=3)
+
