@@ -43,6 +43,10 @@ def app():
     # Normalize the JSON data into a flat table format
     desc = pd.json_normalize(aw)
 
+    # Adding a custom icon for the marker
+    icon_url = 'http://clipart-library.com/new_gallery/146-1462140_the-cheese-cartoon-transparent-background.png'
+
+
     # Define function to create the map
     def get_map(data, start_loc, zoom_start=3):
         
@@ -66,8 +70,11 @@ def app():
             # Initialize the popup using the iframe
             popup = folium.Popup(iframe, min_width=500, max_width=500)
             
-            # Add a marker for each location on the map
-            folium.Marker(location=[row['lat'],row['long']], popup=popup, c=row['Text']).add_to(m)
+            # Load the custom icon
+            icon = folium.features.CustomIcon(icon_url, icon_size=(25, 25))
+
+            #Add each row to the map
+            folium.Marker(location=[row['lat'],row['long']], icon=icon, popup = popup, c=row['Text']).add_to(map)
         
         # Return the completed map object
         return m
