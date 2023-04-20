@@ -38,7 +38,7 @@ def app():
 
 
     # Read in data from a JSON file and select the 'attributes' column
-    aw = pd.read_json('cheese_data.json')['attributes']
+    aw = pd.read_json('data/cheese_data.json')['attributes']
 
     # Normalize the JSON data into a flat table format
     desc = pd.json_normalize(aw)

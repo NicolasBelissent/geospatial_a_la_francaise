@@ -43,8 +43,8 @@ def app():
     """
     )
     # load geospatial data from a Geopackage file and wine data from a csv file
-    gt_polygons = gpd.read_file("EU_PDO.gpkg")
-    labels_df = pd.read_csv('PDO_EU_id.csv')
+    gt_polygons = gpd.read_file("data/EU_PDO.gpkg")
+    labels_df = pd.read_csv('data/PDO_EU_id.csv')
 
     # merge the two datasets on a common column 'PDOid'
     joined = gt_polygons.merge(labels_df, on='PDOid')
@@ -64,7 +64,7 @@ def app():
     wine_country_df['Production'] = wine_country_df['Production'].apply(lambda x: str(x) + ' 1000 hl' if x is not None else None)
 
     # load a DataFrame containing geocoordinates of European countries from a csv file
-    euro_cords_df = pd.read_csv('world_country_and_usa_states_latitude_and_longitude_values.csv')
+    euro_cords_df = pd.read_csv('data/world_country_and_usa_states_latitude_and_longitude_values.csv')
 
     # merge the wine country data with the coordinates DataFrame
     wine_info_loc_df = wine_country_df.merge(euro_cords_df, on='country')
