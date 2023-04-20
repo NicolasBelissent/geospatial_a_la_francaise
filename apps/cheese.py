@@ -83,5 +83,4 @@ def app():
     folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1))
 
     
-map = folium.Map(location=(30, 10), zoom_start=3)
 
