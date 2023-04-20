@@ -48,13 +48,13 @@ def app():
     def get_map(data, start_loc, zoom_start=3):
         
         # Create a new map object with starting location and zoom level
-        m = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
+        map = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
     
         # Adding a custom icon for the marker
         icon_url = 'http://clipart-library.com/new_gallery/146-1462140_the-cheese-cartoon-transparent-background.png'
 
         # Iterate over each row of data
-        for i, row in data.iterrows():
+        for _, row in data.iterrows():
             
             # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
@@ -77,7 +77,7 @@ def app():
             folium.Marker(location=[row['lat'],row['long']], icon=icon, popup = popup, c=row['Text']).add_to(map)
         
         # Return the completed map object
-        return m
+        return map
 
     # Define the starting location and zoom level, and render the map
     folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1))
