@@ -37,8 +37,8 @@ with st.sidebar:
     st.sidebar.info(
         """
         This web app was built by Nicolas Belissent.
-        
-        Source code: <https://github.com/NicolasBelissent/geospatial-streamlit>
+        Source code: <https://github.com/NicolasBelissent/geospatial_a_la_francaise>
+        Medium: <https://medium.com/@nicolas.belissent>
     """
     )
 
