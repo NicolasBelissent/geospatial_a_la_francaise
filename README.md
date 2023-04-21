@@ -24,6 +24,8 @@ The Cheese Visualization page displays a world map with markers for the origin o
 
 The Wine Statistics page displays a choropleth map of Europe, showing wine production and consumption statistics by country. The user can select whether to view production or consumption data using a radio button. The map is created using Geopandas and GeoPackage data.
 
+![image](https://user-images.githubusercontent.com/34235544/233404515-d8679d1f-04c7-4a68-8edf-17c0cf36bba7.png)
+
 ### Data Sources
 
 The cheese origin data was sourced from ArcGIS: https://www.arcgis.com/home/item.html?id=52636e04c969420fb4f68cf74caa7281
