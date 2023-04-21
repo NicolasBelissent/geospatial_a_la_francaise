@@ -19,8 +19,9 @@ def app():
     )
 
     # load preprocessed data
-    choropleth_df = gpd.read_file("data/wine_choropleth.gpkg")
+    choropleth_df = gpd.read_file("data/wine_choropleth_smaller.gpkg")
     markers_df = gpd.read_file("data/wine_markers.gpkg")
+    
     # Create a choropleth map with Wine name column, popups and legend turned off, and name set to 'Wine Varieties'
     m = choropleth_df.explore(column='Wine name', popup=True, legend=False, name='Wine Varieties')
 
