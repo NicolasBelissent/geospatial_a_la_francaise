@@ -32,7 +32,7 @@ def app():
     for index, row in markers_df.iterrows():
         # Create a CircleMarker and add it to the FeatureGroup
         marker = folium.CircleMarker(location=[row.geometry.y, row.geometry.x], 
-                                    radius=row['FactValueNumeric']*12, 
+                                    radius=row['FactValueNumeric']*8, 
                                     fill=True,
                                     fill_color='red',
                                     fill_opacity=0.4,
@@ -43,8 +43,8 @@ def app():
         <p style="font-family: Verdana"> Total consumption (l of pure alcohol): {1} </p>
         <p style="font-family: Verdana"> Vineyard Surface Area (hectares): {2} </p>
         <p style="font-family: Verdana"> Total imported (1000 hl): {3} </p>
-        <p style="font-family: Verdana"> Total exported (1000 hl): {3} </p>
-        <p style="font-family: Verdana"> Total production (1000 hl): {3} </p>'''.format(row['country'], row['FactValueNumeric'], row['Surface Area'], row['Imports'],row['Exports'],row['Production'])
+        <p style="font-family: Verdana"> Total exported (1000 hl): {4} </p>
+        <p style="font-family: Verdana"> Total production (1000 hl): {5} </p>'''.format(row['country'], row['FactValueNumeric'], row['Surface Area'], row['Imports'],row['Exports'],row['Production'])
         
         # Create an iframe for the popup
         iframe = folium.IFrame(html=html, width=400, height=300)
