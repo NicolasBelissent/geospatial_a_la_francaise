@@ -48,7 +48,7 @@ def app():
     def get_map(data, start_loc, zoom_start=3):
         
         # Create a new map object with starting location and zoom level
-        map = folium.Map(start_loc=start_loc, zoom_start=zoom_start, , width='100%')
+        map = folium.Map(start_loc=start_loc, zoom_start=zoom_start, width='100%')
     
         # Adding a custom icon for the marker
         icon_url = 'data/cheese_marker.png'
