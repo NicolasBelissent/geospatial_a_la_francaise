@@ -84,8 +84,18 @@ def app():
     
     #folium_static(m)
 
-    # create a Streamlit HTML component with the map's HTML
-    html = f'<iframe src="{m.get_root().render()}" width="100%" height="500"></iframe>'
-    # display the HTML component
-    st.write(html, unsafe_allow_html=True)
+    # create a div element to hold the map
+    map_div = st.empty()
+
+    # display the map using folium_static
+    folium_static(m)
+
+    # use JavaScript to set the map's width to 100%
+    map_div.write(
+        """
+        <script>
+            document.getElementsByClassName('folium-map')[0].style.width = '100%';
+        </script>
+        """
+    )
 
