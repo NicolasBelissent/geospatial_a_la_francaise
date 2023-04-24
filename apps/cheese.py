@@ -44,9 +44,9 @@ def app():
             
             # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
-            <p style="font-family: Verdana";font-size: 12px> Type: {1} </p>
-            <p style="font-family: Verdana";font-size: 12px> Region: {2} </p>
-            <p style="font-family: Verdana";font-size: 12px> Description: {3} </p>
+            <p style="font-family: Verdana";font-size: 10px> Type: {1} </p>
+            <p style="font-family: Verdana";font-size: 10px> Region: {2} </p>
+            <p style="font-family: Verdana";font-size: 10px> Description: {3} </p>
             <br>
             <img src = {4}> '''.format(row['Cheese'], row['Type'], row['Region'], row['Text'],row['Photo_URL'])
             
