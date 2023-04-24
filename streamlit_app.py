@@ -9,7 +9,7 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": cheese.app, "title": "Cheeses Explorer", "icon": "map"},
+    {"func": cheese.app, "title": "Cheese Explorer", "icon": "map"},
     {"func": wine.app, "title": "Wines of Europe", "icon": "map"},
 ]
 

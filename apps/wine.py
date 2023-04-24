@@ -11,7 +11,7 @@ import pandas as pd
 
 def app():
 
-    st.title("Wine Worldwide")
+    st.title("Wines of Europe")
 
     st.markdown(
         """
