@@ -48,7 +48,7 @@ def app():
     def get_map(data, start_loc, zoom_start=3):
         
         # Create a new map object with starting location and zoom level
-        map = folium.Map(start_loc=start_loc, zoom_start=zoom_start)
+        map = folium.Map(start_loc=start_loc, zoom_start=zoom_start, , width='100%')
     
         # Adding a custom icon for the marker
         icon_url = 'data/cheese_marker.png'
@@ -80,27 +80,7 @@ def app():
         return map
 
     # Define the starting location and zoom level, and render the map
-    m = get_map(desc, start_loc=[0, 0], zoom_start=1)
-
-    # convert the map to HTML
-    map_html = m._repr_html_()
-
-    # add CSS styles to adjust the width of the map
-    map_width = "100%"
-    map_height = "500px"
-    styles = f"""
-        <style>
-            #map {{
-                width: {map_width};
-                height: {map_height};
-            }}
-        </style>
-    """
-
-    # combine the styles and map HTML and display it in Streamlit
-    st.write(folium.Html(iframe_width=map_width, iframe_height=map_height).render())
-    st.write(styles, unsafe_allow_html=True)
-    st.write(map_html, unsafe_allow_html=True)
+    folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1))
 
     
 
