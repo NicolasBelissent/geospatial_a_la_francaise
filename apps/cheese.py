@@ -80,7 +80,12 @@ def app():
         return map
 
     # Define the starting location and zoom level, and render the map
-    folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1),width='100%')
-
+    m = get_map(desc, start_loc=[0, 0], zoom_start=1)
     
+    #folium_static(m)
+
+    # create a Streamlit HTML component with the map's HTML
+    html = f'<iframe src="{m.get_root().render()}" width="100%" height="500"></iframe>'
+    # display the HTML component
+    st.write(html, unsafe_allow_html=True)
 
