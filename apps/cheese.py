@@ -92,10 +92,7 @@ def app():
 
     # use JavaScript to set the map's width to 100%
     map_div.write(
-        """
-        <script>
-            document.getElementsByClassName('folium-map')[0].style.width = '100%';
-        </script>
-        """
+        f'<script>document.getElementsByClassName("folium-map leaflet-container leaflet-fade-anim")[0].style.width = "100%";</script>',
+        unsafe_allow_html=True
     )
 
