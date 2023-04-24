@@ -54,7 +54,7 @@ def app():
         icon_url = 'data/cheese_marker.png'
 
         # Iterate over each row of data
-        for _, row in data.i pydeck_chart() got an unexpected keyword argument 'height'terrows():
+        for _, row in data.iterrows():
             
             # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
