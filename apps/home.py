@@ -14,7 +14,7 @@ def app():
     
     <img src="./blog.png" alt="Geospatial à la fran​çaise" style="float: left; margin-right: 10px;" />
 
-    ![Geospatial à la fran​çaise](data/blog.png)
+    ![Geospatial à la fran​çaise](data/blog.jpg)
 
     """
     )
