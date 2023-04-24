@@ -36,8 +36,8 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web app was built by Nicolas Belissent.
-        Source code: <https://github.com/NicolasBelissent/geospatial_a_la_francaise>
+        This web app was built by Nicolas Belissent.\n
+        Source code: <https://github.com/NicolasBelissent/geospatial_a_la_francaise>\n
         Medium: <https://medium.com/@nicolas.belissent>
     """
     )
