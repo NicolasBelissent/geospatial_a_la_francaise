@@ -6,7 +6,7 @@ def app():
 
     st.markdown(
         """
-    Welcome to Geospatial à la fran​çaise, a geospatial web app that provides visualisations on arguably the pillars of french culture - cheese and wine. 
+    Welcome to Geospatial à la fran​çaise, a geospatial web app that provides visualisations on the pillars of french culture - cheese and wine. 
 
     """
     )

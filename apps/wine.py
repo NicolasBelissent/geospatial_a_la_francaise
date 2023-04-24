@@ -17,12 +17,12 @@ def app():
         """
         It wouldn't be a frenchman's approach to geospatial data science without working with wine data. This page allows you to explore two european wine datasets, overlayed on the same map.
 
-        1. The first layer is a choropleth labelled 'Wine varieties'. It uses data provided by the [geospatial inventory of regulatory information for wine Protected Designations of Origin in Europe](https://springernature.figshare.com/collections/A_geospatial_inventory_of_regulatory_information_for_wine_Protected_Designations_of_Origin_in_Europe/5877659/1). This data provides a geopackage file in which is stored different european wine regions along with the names of the wine that these regions produce.
+        1. The first layer is a choropleth map labelled 'Wine varieties'. It uses data provided by the [geospatial inventory of regulatory information for wine Protected Designations of Origin in Europe](https://springernature.figshare.com/collections/A_geospatial_inventory_of_regulatory_information_for_wine_Protected_Designations_of_Origin_in_Europe/5877659/1). This data provides a geopackage file in which is stored different european wine regions along with the names of the wine that these regions produce.
         2. The second layer is a bubble map labelled 'Country-level statistics'. It uses a combination of [OIV](https://www.oiv.int/what-we-do/data-discovery-report?oiv) data, [WHO wine consumption data](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/alcohol-recorded-per-capita-(15-)-consumption-(in-litres-of-pure-alcohol)) and general european countruy level [geolocation data](https://www.kaggle.com/datasets/paultimothymooney/latitude-and-longitude-for-every-country-and-state?resource=download). The layer consists of country level bubbles, scaled by wine consumption. When clicked these bubbles give more country specific information on Import/Export, Production and Vineyard Surce Area. 
         
         The map is built using a mixture of pandas, geopandas and folium. Data processing was done prior to uploading to the Streamlit cloud. Code will be available on [Github](https://github.com/NicolasBelissent/geospatial_a_la_francaise).
 
-        **Disclaimer:** The visualisation make take some time to render; more than the first map. Enough time to crack a bottle and serve yourself a glass (or 2).
+        **Disclaimer:** The visualisation make take some time to render; more than the first map. Enough time to crack a bottle and pour yourself a glass (or 2).
     """
     )
 
