@@ -84,15 +84,26 @@ def app():
     
     #folium_static(m)
 
-    # create a div element to hold the map
-    map_div = st.empty()
+    # # create a div element to hold the map
+    # map_div = st.empty()
 
-    # display the map using folium_static
-    folium_static(m)
+    # # display the map using folium_static
+    # folium_static(m)
 
-    # use JavaScript to set the map's width to 100%
-    map_div.write(
-        f'<script>document.getElementsByClassName("folium-map leaflet-container leaflet-fade-anim")[0].style.width = "100%";</script>',
-        unsafe_allow_html=True
-    )
+    # # use JavaScript to set the map's width to 100%
+    # map_div.write(
+    #     f'<script>document.getElementsByClassName("folium-map leaflet-container leaflet-fade-anim")[0].style.width = "100%";</script>',
+    #     unsafe_allow_html=True
+    # )
 
+
+    # Convert the folium map object to HTML
+    html_map = m._repr_html_()
+
+    # Display the HTML map using st.pydeck_chart()
+    st.pydeck_chart(height=700, initial_view_state={"latitude": 45.5236, "longitude": -122.6750, "zoom": 13},
+                    deck_wdith="100%", mapbox_style="mapbox://styles/mapbox/light-v9",
+                    tooltip={"text": "Sample tooltip"})
+
+    # Insert the HTML map into the pydeck_chart using Streamlit's HTML element
+    st.write(f'<div style="position:relative;width:100%;height:0;padding-bottom:60%"><iframe srcdoc="{html_map}" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div>', unsafe_allow_html=True)
