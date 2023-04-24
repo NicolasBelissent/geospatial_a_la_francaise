@@ -80,7 +80,7 @@ def app():
         return map
 
     # Define the starting location and zoom level, and render the map
-    folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1),width='100%', height='600px')
+    folium_static(get_map(desc, start_loc=[0, 0], zoom_start=1),width='100%', height='{}px'.format(600))
 
     
 
