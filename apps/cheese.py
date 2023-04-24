@@ -16,22 +16,13 @@ def app():
 
     st.markdown(
         """
-    Welcome to our interactive map showcasing the origin of a selection of cheeses from around the world!
+    The first part of this app/tool is a cheese visualisation tool. Like any good frenchman, I am passionate aboute about cheese - smelly, soft or textured. 
+    
+    This visualisation allows you to explore a selection of cheese varieties from across the globe. For every cheese, I've provided a information on the origin of the cheese, milk type, flavour and in some cases, a picture.
+    
+    The app uses the [Cheeses of the World](https://www.arcgis.com/home/item.html?id=52636e04c969420fb4f68cf74caa7281) dataset provided by ArcGIS. The map is built uses the **folium** python package. Code will be available on [Github](https://github.com/NicolasBelissent/geospatial_a_la_francaise). 
 
-    As you explore the map, you'll discover the birthplace of each cheese and a brief description of its unique characteristics.
-
-    Let's start our journey in France, where the world-famous Brie cheese originated. This soft and creamy cheese has a mild flavor and pairs well with fruit and crackers.
-
-    Moving on to Italy, we find the Parmigiano-Reggiano cheese, which is known for its hard texture and nutty flavor. This cheese is often grated over pasta dishes and soups to add a rich, savory taste.
-
-    If you're a fan of blue cheese, then you'll be interested to learn that it was first created in Roquefort, a small village in France. Roquefort cheese is made from sheep's milk and has a distinctive blue mold that gives it its unique flavor.
-
-    Heading over to the United Kingdom, we discover cheddar cheese, a popular cheese that originated in the village of Cheddar in Somerset. This cheese has a firm texture and a sharp, tangy flavor that becomes more intense as it ages.
-
-    Finally, let's travel to the Netherlands, where Gouda cheese was first made. This cheese has a mild, nutty flavor and comes in various ages, from young and creamy to aged and crumbly.
-
-    We hope you enjoy exploring the origins and characteristics of these cheeses on our interactive map. Don't forget to try some of these delicious cheeses the next time you're at the grocery store or your local cheese shop!
-
+    **Disclaimer:** The visualisation make take some time to render. Enough time to grab a slice of cheese and some bread.
     """
     )
 
@@ -82,4 +73,4 @@ def app():
     # Define the starting location and zoom level, and render the map
     m = get_map(desc, start_loc=[0, 0], zoom_start=1)
     
-    folium_static(m, width=1000, height=600)
+    folium_static(m, width=1000, height=500)
