@@ -1,12 +1,7 @@
 # Import pandas and folium libraries
-import pandas as pd
-import folium
 import streamlit as st
-import leafmap.foliumap as leafmap
 from streamlit_folium import folium_static
 import folium
-import geopandas as gpd
-import numpy as np
 import pandas as pd
 
 
@@ -29,10 +24,10 @@ def app():
 
 
     # Read in data from a JSON file and select the 'attributes' column
-    aw = pd.read_json('data/cheese_data.json')['attributes']
+    raw = pd.read_json('data/cheese_data.json')['attributes']
 
     # Normalize the JSON data into a flat table format
-    desc = pd.json_normalize(aw)
+    cheese_df = pd.json_normalize(raw)
 
     
     # Define function to create the map
@@ -49,9 +44,9 @@ def app():
             
             # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
-            <p style="font-family: Verdana"> Type: {1} </p>
-            <p style="font-family: Verdana"> Region: {2} </p>
-            <p style="font-family: Verdana"> Description: {3} </p>
+            <p style="font-family: Verdana";font-size: 12px> Type: {1} </p>
+            <p style="font-family: Verdana";font-size: 12px> Region: {2} </p>
+            <p style="font-family: Verdana";font-size: 12px> Description: {3} </p>
             <br>
             <img src = {4}> '''.format(row['Cheese'], row['Type'], row['Region'], row['Text'],row['Photo_URL'])
             
@@ -71,6 +66,6 @@ def app():
         return map
 
     # Define the starting location and zoom level, and render the map
-    m = get_map(desc, start_loc=[0, 0], zoom_start=1)
+    m = get_map(cheese_df, start_loc=[0, 0], zoom_start=1)
     
     folium_static(m, width=1000, height=500)
