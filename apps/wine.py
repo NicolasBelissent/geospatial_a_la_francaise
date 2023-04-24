@@ -40,7 +40,7 @@ def app():
     for _, row in markers_df.iterrows():
         # Create a CircleMarker and add it to the FeatureGroup
         marker = folium.CircleMarker(location=[row.geometry.y, row.geometry.x], 
-                                    radius=row['FactValueNumeric']*, 
+                                    radius=row['FactValueNumeric']*10, 
                                     fill=True,
                                     fill_color='red',
                                     fill_opacity=0.4,
