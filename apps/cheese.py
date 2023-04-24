@@ -101,7 +101,7 @@ def app():
     html_map = m._repr_html_()
 
     # Display the HTML map using st.pydeck_chart()
-    st.pydeck_chart(height=700, initial_view_state={"latitude": 45.5236, "longitude": -122.6750, "zoom": 13},
+    st.pydeck_chart(initial_view_state={"latitude": 45.5236, "longitude": -122.6750, "zoom": 13},
                     deck_wdith="100%", mapbox_style="mapbox://styles/mapbox/light-v9",
                     tooltip={"text": "Sample tooltip"})
 
