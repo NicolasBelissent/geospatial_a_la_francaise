@@ -54,7 +54,7 @@ def app():
         icon_url = 'data/cheese_marker.png'
 
         # Iterate over each row of data
-        for _, row in data.iterrows():
+        for _, row in data.i pydeck_chart() got an unexpected keyword argument 'height'terrows():
             
             # Define HTML content for popup
             html = ''' <h1 style="font-family: Verdana"> {0}</h1><br>
@@ -82,4 +82,4 @@ def app():
     # Define the starting location and zoom level, and render the map
     m = get_map(desc, start_loc=[0, 0], zoom_start=1)
     
-    folium_static(m, width=1500, height=800)
+    folium_static(m, width=1000, height=600)
